@@ -44,7 +44,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="w-full mx-auto px-4 md:px-8 fixed top-0 z-50 shadow bg-cyan-50 dark:bg-cyan-950 dark:border-b dark:border-cyan-900">
+    <header className="w-full mx-auto px-4 md:px-8 fixed top-0 z-50 shadow bg-slate-200 dark:bg-slate-800 dark:border-b dark:border-slate-700">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
