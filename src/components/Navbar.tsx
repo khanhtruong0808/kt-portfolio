@@ -1,5 +1,6 @@
-"use client"; // this is a client component
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-scroll/modules";
 import { useTheme } from "next-themes";
@@ -11,7 +12,7 @@ interface NavItem {
   page: string;
 }
 
-const NAV_ITEMS: Array<NavItem> = [
+const NAV_ITEMS: NavItem[] = [
   {
     label: "Home",
     page: "home",
@@ -29,15 +30,27 @@ const NAV_ITEMS: Array<NavItem> = [
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+  const [mounted, setMounted] = useState(false);
   const [navbar, setNavbar] = useState(false);
+
+  // Fix for system theme flickering
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <header className="w-full mx-auto px-4 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <Link to="home">
               <div className="container flex items-center space-x-2 cursor-pointer">
-                <h2 className="text-2xl font-bold">Khanh Truong</h2>
+                <h2 className="text-2xl font-bold">Khanh&apos;s Portfolio</h2>
               </div>
             </Link>
             <div className="md:hidden">

@@ -15,6 +15,7 @@ const HeroSection = () => {
             width={325}
             height={325}
             className="rounded-full shadow-2xl"
+            priority
           />
         </div>
         <div className="md:mt-2 md:w-3/5">
@@ -23,13 +24,13 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg mt-4 mb-6 md:text-2xl">
             I&#39;m a{" "}
-            <span className="font-semibold text-teal-600">CS Student </span>
+            <span className="font-semibold text-cyan-600">CS Student </span>
             based in Sacramento, CA. My goal is to create software that improves
             other lives, making them easier and more meaningful.
           </p>
           <Link
             to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700 cursor-pointer transition"
+            className="text-neutral-100 font-semibold px-6 py-3 bg-cyan-600 rounded shadow hover:bg-cyan-700 cursor-pointer transition"
             activeClass="active"
             spy={true}
             smooth={true}
