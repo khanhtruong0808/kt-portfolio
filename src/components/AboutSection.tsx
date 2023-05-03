@@ -69,7 +69,7 @@ const AboutSection = () => {
               {skills.map((item, idx) => {
                 return (
                   <Link key={idx} href={item.docs} target="_blank">
-                    <p className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-800 rounded font-semibold hover:bg-gray-300 hover:text-gray-700 hover:scale-105 transition">
+                    <p className="bg-slate-300 px-4 py-2 mr-2 mt-2 text-slate-800 rounded font-semibold hover:bg-slate-400 hover:text-gray-900 hover:scale-105 transition">
                       {item.skill}
                     </p>
                   </Link>
