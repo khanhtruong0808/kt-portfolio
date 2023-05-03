@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="dark:bg-stone-900">
+      <body className="dark:bg-cyan-950 bg-cyan-50">
         <ThemeProvider enableSystem attribute="class">
           <Navbar />
           {children}
