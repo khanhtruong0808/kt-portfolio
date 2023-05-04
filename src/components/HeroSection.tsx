@@ -1,13 +1,14 @@
-"use client"; // this is a client component
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 const HeroSection = () => {
   return (
     <section id="home">
-      <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-24 md:py-32 md:flex-row md:space-x-4 md:text-left">
+      <div className="animation-delay-2 my-10 flex animate-fadeIn flex-col items-center justify-center py-16 text-center sm:py-24 md:flex-row md:space-x-4 md:py-32 md:text-left">
         <div className="md:mt-2 md:w-1/2">
           <Image
             src="/headshot.jpeg"
@@ -19,29 +20,43 @@ const HeroSection = () => {
           />
         </div>
         <div className="md:mt-2 md:w-3/5">
-          <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">
+          <h1 className="mt-6 text-4xl font-bold md:mt-0 md:text-7xl">
             Hi, I&#39;m Khanh!
           </h1>
-          <p className="text-lg mt-4 mb-6 md:text-2xl">
+          <p className="mb-6 mt-4 text-lg md:text-2xl">
             I&#39;m a{" "}
             <span className="font-semibold text-cyan-500">CS Student </span>
             based in Sacramento, CA. My goal is to create software that improves
             other lives, making them easier and more meaningful.
           </p>
-          <Link
-            to="projects"
-            className="text-neutral-100 font-semibold px-6 py-3 bg-cyan-600 rounded shadow hover:bg-cyan-700 cursor-pointer transition"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            Projects
-          </Link>
+          <div className="flex gap-4">
+            <Link
+              to="projects"
+              className="cursor-pointer rounded bg-cyan-600 px-6 py-2.5 font-semibold text-neutral-100 shadow transition hover:bg-cyan-700"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Projects
+            </Link>
+            <a
+              href="resume.pdf"
+              className="inline-flex cursor-pointer gap-x-2 rounded bg-cyan-600 px-6 py-2.5 font-semibold text-neutral-100 shadow transition hover:bg-cyan-700"
+              download="Khanh Truong Resume - 5/3/23.pdf"
+            >
+              Download CV
+              <AiOutlineArrowDown
+                color="white"
+                className="-ml-0.5 h-5 w-5"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
         </div>
       </div>
-      <div className="flex flex-row items-center text-center justify-center ">
+      <div className="flex flex-row items-center justify-center text-center ">
         <Link
           to="about"
           activeClass="active"
