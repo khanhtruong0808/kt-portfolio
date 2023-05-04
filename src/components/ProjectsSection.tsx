@@ -14,29 +14,28 @@ const projects = [
     link: "https:tea-rex.vercel.app",
   },
   {
+    name: "Eyelash Appointment Booking App",
+    description:
+      "An appointment booking app for a local eyelash business. Currently WIP.",
+    image: "/lashed-by-vienna.png",
+    github: "https://github.com/khanhtruong0808/lashed-by-vienna",
+    link: "https://lashed-by-vienna.vercel.app/",
+  },
+  {
     name: "Advice Generator",
     description: "An advice generator built for a frontendmentor.io challenge.",
     image: "/advice-generator.png",
     github: "https://github.com/khanhtruong0808/advice-generator-app",
     link: "https://advice-generator-app-ten-sepia.vercel.app/",
   },
-  {
-    name: "Interactive Rating Component",
-    description:
-      "An interactive rating component built for a frontendmentor.io challenge.",
-    image: "/rating-comp.png",
-    github:
-      "https://github.com/khanhtruong0808/interactive-rating-component-main",
-    link: "https://interactive-rating-component-main-khaki-gamma.vercel.app/",
-  },
 ];
 
 const ProjectsSection = () => {
   return (
     <section id="projects">
-      <h1 className="my-10 text-center font-bold text-4xl">
+      <h1 className="my-10 text-center text-4xl font-bold">
         Projects
-        <hr className="w-6 h-1 mx-auto my-4 bg-cyan-500 border-0 rounded"></hr>
+        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-cyan-500"></hr>
       </h1>
 
       <div className="flex flex-col space-y-28">
@@ -44,7 +43,7 @@ const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 items-start md:items-center">
+                <div className="animation-delay-2 flex animate-slideUpCubiBezier flex-col items-start md:flex-row md:items-center md:space-x-12">
                   <div className="md:w-1/2">
                     <Link href={project.link}>
                       <Image
@@ -52,26 +51,26 @@ const ProjectsSection = () => {
                         alt=""
                         width={1000}
                         height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70 object-fill"
+                        className="rounded-xl object-fill shadow-xl hover:opacity-70"
                       />
                     </Link>
                   </div>
                   <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-300">
+                    <h1 className="mb-6 text-4xl font-bold">{project.name}</h1>
+                    <p className="mb-4 text-xl leading-7 text-neutral-600 dark:text-neutral-300">
                       {project.description}
                     </p>
-                    <div className="flex flex-row align-bottom space-x-4">
+                    <div className="flex flex-row space-x-4 align-bottom">
                       <Link href={project.github} target="_blank">
                         <BsGithub
                           size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          className="cursor-pointer transition-transform hover:-translate-y-1"
                         />
                       </Link>
                       <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          className="cursor-pointer transition-transform hover:-translate-y-1"
                         />
                       </Link>
                     </div>
