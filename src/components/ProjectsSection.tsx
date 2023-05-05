@@ -19,7 +19,7 @@ const projects = [
       "An appointment booking app for a local eyelash business. Currently WIP.",
     image: "/lashed-by-vienna.png",
     github: "https://github.com/khanhtruong0808/lashed-by-vienna",
-    link: "https://lashed-by-vienna.vercel.app/",
+    link: "https://lashedbyvienna.vercel.app/",
   },
   {
     name: "Advice Generator",
