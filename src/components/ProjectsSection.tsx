@@ -11,7 +11,7 @@ const projects = [
       "Tea-Rex is a website for a local boba shop allowing customers to place online orders and employees to manage the menu. Built alongside a group of other computer science students. Currently WIP and will be finished Fall 2023.",
     image: "/tea-rex.png",
     github: "https://github.com/khanhtruong0808/tea-rex",
-    link: "https:tea-rex.vercel.app",
+    link: "https://tea-rex.vercel.app",
   },
   {
     name: "Eyelash Appointment Booking App",
