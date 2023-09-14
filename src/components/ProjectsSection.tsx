@@ -6,6 +6,14 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
+    name: "The Local Bard",
+    description:
+      "The Local Bard is a website to search for local theaters in your area. Currently WIP.",
+    image: "/thelocalbard.png",
+    github: "https://github.com/khanhtruong0808/the-local-bard",
+    link: "https://thelocalbard.vercel.app",
+  },
+  {
     name: "Tea-Rex",
     description:
       "Tea-Rex is a website for a local boba shop allowing customers to place online orders and employees to manage the menu. Built alongside a group of other computer science students. Currently WIP and will be finished Fall 2023.",
