@@ -42,9 +42,9 @@ const HeroSection = () => {
               Projects
             </Link>
             <a
-              href="https://docs.google.com/uc?id=1FLVa5g4UBD11Vp-uIjScmDmU5lrmeW5e&export=download"
+              href="/Khanh_Truong_Resume_20231004.pdf"
               className="inline-flex cursor-pointer gap-x-2 rounded bg-cyan-600 px-6 py-2.5 font-semibold text-neutral-100 shadow transition hover:bg-cyan-700"
-              download="Khanh Truong Resume - 5/3/23.pdf"
+              download="Khanh Truong Resume - 2023/10/04.pdf"
             >
               Download CV
               <AiOutlineArrowDown
